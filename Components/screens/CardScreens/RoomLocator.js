@@ -9,7 +9,7 @@ const RoomLocator = () => {
   const [description, setDescription] = useState('Feel free to search your room')
   const [getImage, setGetImage] = useState('https://via.placeholder.com/150')
 
-  const API = 'https://guide-plus.vercel.app'
+  const API = 'http://192.168.100.8:5000'
 
   const HandleSearch = async() => {
     // try {
@@ -24,9 +24,9 @@ const RoomLocator = () => {
         // console.log(result);
         if(result.description){
           setDescription(result.description)
-          setGetImage(result.imageURI)
+          setGetImage(result.imageURL)
           Keyboard.dismiss()
-          console.log(getImage);
+          // console.log(getImage);
         }else{
           Alert.alert(result.result)
           setDescription('Feel free to search your room')

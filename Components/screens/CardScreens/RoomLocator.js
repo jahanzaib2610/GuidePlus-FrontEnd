@@ -9,7 +9,7 @@ const RoomLocator = () => {
   const [description, setDescription] = useState('Feel free to search your room')
   const [getImage, setGetImage] = useState('https://via.placeholder.com/150')
 
-  const API = 'http://192.168.100.8:5000'
+  const API = 'https://guide-plus.vercel.app'
 
   const HandleSearch = async() => {
     // try {
@@ -64,7 +64,7 @@ const RoomLocator = () => {
         <View style={styles.descriptionArea}>
           <Text style={{fontWeight:'light', fontSize:16}}>{description}</Text>
         </View>
-        <Image source={{ uri: getImage }} style={{ width: '100%', height: 200, borderRadius: 10 }} />
+        <Image source={{ uri: getImage }} style={{ width: '100%', height: 200, borderRadius: 10, objectFit:'cover' }} />
       </View>
     </View>
   )
